@@ -1,0 +1,3719 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <title>CCS3 Revision 2020</title>
+</head>
+
+<body>
+    <h3>En este ejercicio veremos las características más destacadas de  CSS.</h3>
+
+    <h1>Selectors</h1>
+    <div>
+        Change the color of all %ltp> elements to "red".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        p {<br/>
+            color:red;<br/>
+        }<br/>
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp&gt This is a paragrpah. &lt/p&gt<br/>
+        &ltp&gt This is another paragraph. &lt/p&gt<br/>
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                    p{
+                        color:red;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </body>
+        </html><br/><br/>
+    </div>
+    <div>
+        Change the color of the element with id="para1", to "red".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        #para1 {<br/>
+            color:red<br/>
+        }<br/>
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp id="para1"> This is a paragrpah. &lt/p&gt<br/>
+        &ltp&gt This is another paragraph. &lt/p&gt<br/>
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                    #para1 {
+                        color:red;
+                    }
+                    
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p id="para1">This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </body>
+        </html><br/><br/>
+
+    </div>
+    <div>
+        Change the color of all elements with the class "colortext", to "red".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        .colortext {<br/>
+            color:red;<br/>
+        }<br/>
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp> This is a paragrpah. &lt/p&gt<br/>
+        &ltp class="colortext"> This is another paragraph. &lt/p&gt<br/>
+        &ltp class="colortext"> This is also a paragraph. &lt/p&gt<br/>
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                    .colortext {
+                        color:red;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+                <p class="colortext">This is another paragraph.</p>
+                <p class="colortext">This is also a paragraph.</p>
+            </body>
+        </html><br/><br/>
+    </div>
+    <div>
+        Change the color of all &ltp> and &lth1> elements, to "red". Group the selectors to minimize code.<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        h1, p {
+            color:red;
+        }
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &lth2&gt This is a smaller Heading &lt/h2&gt<br/>
+        &ltp> This is a paragrpah. &lt/p&gt<br/>
+        &ltp> This is another paragraph. &lt/p&gt<br/>
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                    h1, p {
+                        color:red;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <h2>This is a smaller Heading</h2>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+>
+            </body>
+        </html><br/><br/>
+    </div>
+
+    <h1>How To...</h1>
+    <div>
+        Add an external style sheet with the URL: "mystyle.css".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &lt link rel="stylesheet" href="mystyle.css"><br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp&gt This is a paragraph. &lt/p&gt<br/>
+        &ltp> This is another paragrpah. &lt/p&gt<br/>
+
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <link rel="stylesheet" href="mystyle.css">
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </body>
+        </html><br/><br/>
+    </div>
+    <div>
+        Set "background-color: linen" for the page, using an internal style sheet.<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        body {<br/>
+            background-color:linen;<br/>
+        }<br/>
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp> This is a paragrpah. &lt/p&gt<br/>
+        &ltp> This is another paragraph. &lt/p&gt<br/>
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                    body {
+                        background-color: linen;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </body>
+        </html><br/><br/>
+    </div>
+    <div>
+        Set "background-color: linen" for the page, using an inline style.<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+
+        &lt body style="background-color:linen"><br/>
+
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp> This is a paragrpah. &lt/p&gt<br/>
+        &ltp> This is another paragraph. &lt/p&gt<br/>
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+            </head>
+            <body>
+                <body style="background-color: linen;">
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </body>
+        </html><br/><br/>
+    </div>
+
+    <div>
+        Remove all styles, except the external style sheet "mystyle.css".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &lt link rel="stylesheet" href="mystyle.css"><br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp&gt This is a paragraph. &lt/p&gt<br/>
+        &ltp> This is another paragrpah. &lt/p&gt<br/>
+
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <link rel="stylesheet" href="mystyle.css">
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </body>
+        </html><br/><br/>
+    </div>
+
+    <h1>Background</h1>
+    <div>
+        Set the background color for the page to "linen" and the background color for &lth1> to "lightblue".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        body {<br/>
+            background-color:linen;<br/>
+        }<br/>
+        h1 {<br/>
+            background-color:lightblue;<br/>
+        }<br/>
+
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp&gt This is a paragraph. &lt/p&gt<br/>
+        &ltp> This is another paragrpah. &lt/p&gt<br/>
+
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                body {
+                    background-color:linen;
+                }
+                h1 {
+                    background-color:lightblue;
+                }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </body>
+        </html><br/><br/>
+    </div>
+    <div>
+        Set "paper.gif" as the background image of the page.<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        body {<br/>
+            background-image: url("paper.gif");<br/>
+        }<br/>
+
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp&gt This is a paragraph. &lt/p&gt<br/>
+        &ltp> This is another paragrpah. &lt/p&gt<br/>
+
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                body {
+                    background-image: url("paper.gif");
+                }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </body>
+        </html><br/><br/>
+    </div>
+    <div>
+        Set "gradient_bg_vertical.png" as the background image of the page, and repeat it vertically only.<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        body {<br/>
+            background-image: url("gradient_bg_vertical.png");<br/>
+            background-repeat: repeat-y;<br/>
+        }<br/>
+
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp&gt This is a paragraph. &lt/p&gt<br/>
+        &ltp> This is another paragrpah. &lt/p&gt<br/>
+
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                body {
+                    background-image: url("gradient_bg_vertical.png");
+                    background-repeat: repeat-y;
+                }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </body>
+        </html><br/><br/>
+
+    </div>
+    <div>
+        Specify that the background image should be shown once, in the top right corner.<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        body {<br/>
+            background-image: url("img_tree.png");<br/>
+            background-repeat: repeat-y;<br/>
+            background-position: top right;<br/>
+        }<br/>
+
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp&gt This is a paragraph. &lt/p&gt<br/>
+        &ltp> This is another paragrpah. &lt/p&gt<br/>
+
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                body {
+                    background-image: url("img_tree.png");
+                    background-repeat: no-repeat;
+                    background-position: top right;
+                }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </body>
+        </html><br/><br/>
+
+    </div>
+    <div>
+        Use the shorthand background property to set background image to "img_tree.png", show it once, in the top right corner.<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        body {<br/>
+            background: url("img_tree.png") no-repeat top right;<br/>
+        }<br/>
+
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp&gt This is a paragraph. &lt/p&gt<br/>
+        &ltp> This is another paragrpah. &lt/p&gt<br/>
+
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                body {
+                    background: url("img_tree.png") no-repeat top right;
+                }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </body>
+        </html><br/><br/>
+    </div>
+
+    <h1>Border</h1>
+    <div>
+        Set a "4px", "dotted" border for &ltp>.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            p {<br/>
+                border-style:dotted;<br/>
+                border-width:4px;<br/>
+            }<br/>
+            
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+    
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+        
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                p {
+                    border-style: dotted;
+                    border-width: 4px;
+                }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+            </body>
+        </html><br/><br/>
+    </div>
+    <div>
+        Set the border color for &ltp> to "red".<br/>
+        &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            p {<br/>
+                border-style:dotted;<br/>
+                border-width:4px;<br/>
+                border-color:red;<br/>
+            }<br/>
+            
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+    
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+        
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                p {
+                    border-style: dotted;
+                    border-width: 4px;
+                    border-color: red;
+                }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+            </body>
+        </html><br/><br/>
+
+    </div>
+    <div>
+        Change the 3 border properties, so that they only show the border on the top side.<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        p {<br/>
+                border-top-style: dotted;<br/>
+                border-top-width: 4px;<br/>
+                border-top-color: red;<br/>
+        }<br/>
+            
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+    
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp&gt This is a paragraph. &lt/p&gt<br/>
+        
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                p {
+                    border-top-style: dotted;
+                    border-top-width: 4px;
+                    border-top-color: red;
+                }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+            </body>
+        </html><br/><br/>
+    </div>
+    <div>
+        With the border property: Set the border for p to "10px", "solid" and "green".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        p {<br/>
+            border 10px solid green;
+        }<br/>
+            
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+    
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp&gt This is a paragraph. &lt/p&gt<br/>
+        
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                p {
+                    border: 10px solid green;
+                }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+            </body>
+        </html><br/><br/>
+        
+    </div>
+
+    <h1>Margin</h1>
+
+    <div>
+        Set the left margin of &lth1> to "20px".<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            h1 {<br/>
+                background-color: lightblue;<br/>
+                margin-left: 20px;<br/>
+            }<br/>
+                
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+        
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                h1 {
+                    background-color: lightblue;
+                    margin-left:20px;
+                }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+            </body>
+        </html><br/><br/>
+    </div>
+    <div>
+        Set all margins for &lth1> to "25px".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        h1 {<br/>
+            background-color: lightblue;<br/>
+            margin: 35px;<br/>
+        }<br/>
+                
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+        
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp&gt This is a paragraph. &lt/p&gt<br/>
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                h1 {
+                    background-color: lightblue;
+                    margin: 25px
+                }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+            </body>
+        </html><br/><br/>
+
+    </div>
+    <div>
+        Use the margin property to set the top and bottom margins for &lth1> to "50px", and left and right margins to "25px".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        h1 {<br/>
+            background-color: lightblue;<br/>
+            margin: 50px, 25px;<br/>
+        }<br/>
+                
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+        
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp&gt This is a paragraph. &lt/p&gt<br/>
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                h1 {
+                    background-color: lightblue;
+                    margin: 50px, 25px;
+                }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+            </body>
+        </html><br/><br/>
+    </div>
+    <div>
+        Use the margin property to center align the &lth1> element.<br/><br/>
+        Use the margin property to set the top and bottom margins for &lth1> to "50px", and left and right margins to "25px".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        h1 {<br/>
+            background-color: lightblue;<br/>
+            width: 300px;<br/>
+            margin: auto;<br/>
+        }<br/>
+                
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+        
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp&gt This is a paragraph. &lt/p&gt<br/>
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                h1 {
+                    background-color: lightblue;
+                    width: 300px;
+                    margin: auto;
+                }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+            </body>
+        </html><br/><br/>
+    </div>
+
+
+    <h1>Padding</h1>
+    <div>
+        Set the top padding of &ltp> to "30px".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        p {<br/>
+            background-color: lightblue;<br/>
+            padding-top: 30px;<br/>
+        }<br/>
+                
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+        
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp&gt This is a paragraph. &lt/p&gt<br/>
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                p {
+                    background-color: lightblue;
+                    padding-top: 30px;
+                }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+            </body>
+        </html><br/><br/>
+
+
+    </div>
+    <div>
+        Set all paddings for &ltp> to "50px".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        p {<br/>
+            background-color: lightblue;<br/>
+            padding: 50px;<br/>
+        }<br/>
+                
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+        
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp&gt This is a paragraph. &lt/p&gt<br/>
+
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                p {
+                    background-color: lightblue;
+                    padding: 50px;
+                }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+            </body>
+        </html><br/><br/>
+    </div>
+    <div>
+        Use the padding property to set the top and bottom paddings for &ltp> to "25px", and left and right paddings to "50px".<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            p {<br/>
+                background-color: lightblue;<br/>
+                padding: 25px 50px;<br/>
+            }<br/>
+                    
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                p {
+                    background-color: lightblue;
+                    padding: 25px 50px;
+                }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+            </body>
+        </html><br/><br/>
+    </div>
+
+    <h1>Heigth / Width</h1>
+    <div>
+        Set the height of &lth1> to "100px".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            h1 {<br/>
+                background-color: lightblue;<br/>
+                height: 100px;<br/>
+            }<br/>
+                    
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                h1 {
+                    background-color: lightblue;
+                    height: 100px;
+                }
+                </style>
+            </head>
+            <body>
+                <h1>This is a Heading</h1>
+                <p>This is a paragraph.</p>
+            </body>
+        </html><br/><br/>
+    </div>
+    <div>
+        Set the width of &lth1> to "50%".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        h1 {<br/>
+            background-color: lightblue;<br/>
+            width: 50%;<br/>
+        }<br/>
+                    
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+            
+        &lth1&gt This is a Heading &lt/h1&gt<br/>
+        &ltp&gt This is a paragraph. &lt/p&gt<br/>
+    
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+    Example:
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+            h1 {
+                background-color: lightblue;
+                width: 50%;
+            }
+            </style>
+        </head>
+        <body>
+            <h1>This is a Heading</h1>
+            <p>This is a paragraph.</p>
+        </body>
+    </html><br/><br/>
+    </div>
+
+    <h1>Box Model</h1>
+    <div>
+        Set the width of the div to "200px".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        div {<br/>
+            background-color: lightblue;<br/>
+            width: 200px;<br/>
+        }<br/>
+                    
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+            
+        &ltdiv&gt Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt/div&gt<br/>
+    
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+    Example:
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+            div {
+                background-color: lightblue;
+                width: 200px;
+            }
+            </style>
+        </head>
+        <body>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </body>
+    </html><br/><br/>
+    </div>
+    <div>
+        Set the padding of the div to "25px".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        div {<br/>
+            background-color: lightblue;<br/>
+            width: 200px;<br/>
+            padding: 25px;<br/>
+        }<br/>
+                    
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+            
+        &ltdiv&gt Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt/div&gt<br/>
+    
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+            div {
+                background-color: lightblue;
+                width: 200px;
+                padding: 25px;
+            }
+            </style>
+        </head>
+        <body>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </body>
+    </html><br/><br/>
+    </div>
+    <div>
+        Set the border of the div to "25px solid navy".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        div {<br/>
+            background-color: lightblue;<br/>
+            width: 200px;<br/>
+            padding: 25px;<br/>
+            border: 25px solid navy;
+        }<br/>
+                    
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+            
+        &ltdiv&gt Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt/div&gt<br/>
+    
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                div {
+                    background-color: lightblue;
+                    width: 200px;
+                    padding: 25px;
+                    border: 25px solid navy;
+                }
+                </style>
+            </head>
+            <body>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            </body>
+        </html><br/><br/>
+    </div>
+    <div>
+        Set the margin of the div to "25px".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+        &lthtml&gt<br/>
+        &lthead&gt<br/>
+        &ltstyle&gt<br/>
+        div {<br/>
+            background-color: lightblue;<br/>
+            width: 200px;<br/>
+            padding: 25px;<br/>
+            border: 25px solid navy;
+            margin: 25px;
+        }<br/>
+                    
+        &lt/style&gt<br/>
+        &lt/head&gt<br/>
+        &ltbody&gt<br/>
+            
+        &ltdiv&gt Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt/div&gt<br/>
+    
+        &lt/body&gt<br/>
+        &lt/html&gt<br/>
+
+        Example:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                div {
+                    background-color: lightblue;
+                    width: 200px;
+                    padding: 25px;
+                    border: 25px solid navy;
+                    margin: 25px;
+                }
+                </style>
+            </head>
+            <body>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            </body>
+        </html><br/><br/>
+    </div>
+
+    <h1>Outline</h1>
+    <div>
+    Set a "solid", "5px" outline for &ltp>.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            p {<br/>
+                outline-style: solid;<br/>
+                outline-wifth: 5px;<br/>
+            }<br/>
+                    
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+    Example:
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+            p {
+                outline-style: solid;
+                outline-width: 5px;
+            }
+            </style>
+        </head>
+        <body>
+            <h1>This is a Heading</h1>
+            <p>This is a paragraph.</p>
+        </body>
+    </html><br/><br/>
+    </div>
+    <div>
+        Set the outline color for &ltp> to "green".<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            p {<br/>
+                outline-style: solid;<br/>
+                outline-wifth: 4px;<br/>
+                outline-color: green;<br/>
+            }<br/>
+                    
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+    Example:
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+            p {
+                outline-style: solid;
+                outline-width: 4px;
+                outline-color: green;
+            }
+            </style>
+        </head>
+        <body>
+            <h1>This is a Heading</h1>
+            <p>This is a paragraph.</p>
+        </body>
+    </html><br/><br/>
+    </div>
+    <div>
+        With the outline property: Set the outline for p to "red", "dotted" and "10px".<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            p {<br/>
+                outline: red dotted 10px;<br/>
+            }<br/>
+                    
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+    Example:
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+            p {
+                outline: red dotted 10px;
+            }
+            </style>
+        </head>
+        <body>
+            <h1>This is a Heading</h1>
+            <p>This is a paragraph.</p>
+        </body>
+    </html><br/><br/>
+    </div>
+
+    <h1>Text</h1>
+    <div>
+        Set the text color for the page to "red", and the text color for &lth1> to "blue".<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            body {
+                color: red;
+            }
+            h1 {
+                color:blue;
+            }
+            
+                    
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp&gt This is another paragraph. &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+            body {
+                color: red;
+            }
+            h1 {
+                color: blue;
+            }
+            </style>
+        </head>
+        <body>
+            <h1>This is a Heading</h1>
+            <p>This is a paragraph.</p>
+        </body>
+    </html><br/><br/>
+    </div>
+
+    <div>
+        Center align the &lth1> element.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+        
+            h1 {<br/>
+                text-align: center;<br/>
+            }<br/>
+            
+                    
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp&gt This is another paragraph. &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                    h1 {
+                        text-align: center;
+                    }
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph.</p>
+                    <p>This is another paragraph.</p>
+                </body>
+            </html><br/><br/>
+    </div>
+    <div>
+        Remove the underline from the link.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+        
+            a {<br/>
+                text-decoration:none;<br/>
+            }<br/>
+            
+                    
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp&gt &lta href="css_text.asp">CSS text tutorial &lt/a&gt &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                    a {
+                        text-decoration: none;
+                    }
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph.</p>
+                    <p><a href="css_text.asp">CSS text tutorial</a></p>
+                </body>
+            </html><br/><br/>
+    </div>
+
+    <div>
+        Style text in &lth1> to uppercase letters, and text in &ltp> to capitalized letters.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+        
+            h1 {
+                text-transform: uppercase;
+            }
+            p {
+                text-transforms: capitalized;
+            }
+            
+                    
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp&gt This is another paragraph. &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                    h1 {
+                        text-transform: uppercase;
+                    }
+                    p {
+                        text-transform: capitalize;
+                    }
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph.</p>
+                    <p>This is another paragraph.</p>
+                </body>
+            </html><br/><br/>
+
+    </div>
+    <div>
+        Indent the first line of the &ltp> element with 20px.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            p {
+                text-indent: 20px;
+            }
+            
+                    
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+            ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+            mollit anim id est laborum &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                    p {
+                        text-indent: 20px;
+                    }
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+                        anim id est laborum </p>
+                </body>
+            </html><br/><br/>
+    </div>
+
+    <h1>Font</h1>
+    <div>
+        Set the font family for the page to "Courier New", and the font family for &lth1> to "Verdana".<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            body {
+                font-family:"Courier New";
+            }
+            h1 {
+                font-family:"Verdana"
+            }
+            
+                    
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp&gt This is another paragraph. &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                    body {
+                        font-family: 'Courier New';
+                    }
+                    h1 {
+                        font-family: Verdana;
+                    }
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph.</p>
+                    <p>This is another paragraph.</p>
+                </body>
+            </html><br/><br/>
+
+    </div>
+    <div>
+        Show &ltp> elements as "italic" text.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            p {<br/>
+                font-style: italic;<br/>
+            }<br/>
+            
+            
+                    
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp&gt This is another paragraph. &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                    p {
+                        font-style: italic;
+                    }
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph.</p>
+                    <p>This is another paragraph.</p>
+                </body>
+            </html><br/><br/>
+
+    </div>
+    <div>
+        Set the font size for the page to "20px", and the font size for &lth1> to "3em".<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            body {<br/>
+                font-size: 20px;<br/>
+            }<br/>
+            h1 {<br/>
+                font-size: 3em;<br/>
+            }<br/>
+            
+                    
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp&gt This is another paragraph. &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                    body{
+                        font-size: 20px;
+                    }
+                    h1{
+                        font-size: 3em;
+                    }
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph.</p>
+                    <p>This is another paragraph.</p>
+                </body>
+            </html><br/><br/>
+    </div>
+    <div>
+        Show &ltp> elements as "bold" text.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            p {<br/>
+                font-weight: bold;<br/>
+            }<br/>
+            
+                    
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp&gt This is another paragraph. &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                    p {
+                        font-weight: bold;
+                    }
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph.</p>
+                    <p>This is another paragraph.</p>
+                </body>
+            </html><br/><br/>
+    </div>
+    <div>
+        With the font property: Set the &ltp> to "italic", "20px" and "Verdana".<br/><br/>
+        &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            p {<br/>
+                font: italic 20px Verdana;<br/>
+            }<br/>
+            
+                    
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp&gt This is another paragraph. &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                    p {
+                        font: italic 20px Verdana;
+                    }
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph.</p>
+                    <p>This is another paragraph.</p>
+                </body>
+            </html><br/><br/>
+    </div>
+
+    <h1>Links</h1>
+    <div>
+        Set the color for links to "green".<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            a {<br/>
+                color:green;<br/>
+            }<br/>
+            
+                    
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp&gt &lta href="https://www.w3schools.com"> W3schools.com &lt/a&gt &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                    a {
+                        color: green;
+                    }
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph.</p>
+                    <p><a href="https://www.w3schools.com">W3Schools.com</a></p>
+                </body>
+            </html><br/><br/>
+
+    </div>
+    <div>
+        Set the color for unvisited links to "red", and the color for visited links "blue".<br/><br/>
+
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            /* unvisited link */<br/>
+            a:link {<br/>
+                color: red;<br/>
+            }<br/>
+
+            /* visited link */<br/>
+            a:visited {<br/>
+                color: blue;<br/>
+            }<br/>
+
+            /* mouse over link */<br/>
+            a:hover {<br/>
+                color: black;<br/>
+            }<br/>
+
+            /* selected link */<br/>
+            a:active {<br/>
+                color: green;<br/>
+            }<br/>
+
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp&gt &lta href="https://www.w3schools.com"> W3schools.com &lt/a&gt &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        /* unvisited link */
+                        a:link {
+                            color: red;
+                        }
+
+                        /* visited link */
+                        a:visited {
+                            color: blue;
+                        }
+
+                        /* mouse over link */
+                        a:hover {
+                            color: black;
+                        }
+                        
+                        /* selected link */
+                        a:active{
+                            color: green;
+                        }
+
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph.</p>
+                    <p><a href="https://www.w3schools.com">W3Schools.com</a></p>
+                </body>
+            </html><br/><br/>
+    </div>
+    <div>
+        Remove underlines for visited and unvisited links, and specify "underline" for the hover and active link states.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            /* unvisited link */<br/>
+            a:link {<br/>
+                text-decoration:none;<br/>
+            }<br/>
+
+            /* visited link */<br/>
+            a:visited {<br/>
+                text-decoration:none;<br/>
+            }<br/>
+
+            /* mouse over link */<br/>
+            a:hover {<br/>
+                text-decoration:underline;<br/>
+            }<br/>
+
+            /* selected link */<br/>
+            a:active {<br/>
+                text-decoration:underline:underline;<br/>
+            }<br/>
+
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp&gt &lta href="https://www.w3schools.com"> W3schools.com &lt/a&gt &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        /* unvisited link */
+                        a:link {
+                            text-decoration: none;
+                        }
+
+                        /* visited link */
+                        a:visited {
+                            text-decoration: none;
+                        }
+
+                        /* mouse over link */
+                        a:hover {
+                            text-decoration: underline;
+                        }
+                        
+                        /* selected link */
+                        a:active{
+                            text-decoration: underline;
+                        }
+
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph.</p>
+                    <p><a href="https://www.w3schools.com">W3Schools.com</a></p>
+                </body>
+            </html><br/><br/>
+    </div>
+    <div>
+        Set the background color for visited and unvisited links to "lightblue", 
+        and the background color for the hover and active link states to "yellow".<br/><br/>
+
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            /* unvisited link */<br/>
+            a:link {<br/>
+                background-color:lightnblue;<br/>
+            }<br/>
+
+            /* visited link */<br/>
+            a:visited {<br/>
+                background-color:lightnblue;<br/>
+            }<br/>
+
+            /* mouse over link */<br/>
+            a:hover {<br/>
+                background-color:yellow;<br/>
+            }<br/>
+
+            /* selected link */<br/>
+            a:active {<br/>
+                background-color:yellow;<br/>
+            }<br/>
+
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp&gt &lta href="https://www.w3schools.com"> W3schools.com &lt/a&gt &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        /* unvisited link */
+                        a:link {
+                            background-color: lightblue;
+                        }
+
+                        /* visited link */
+                        a:visited {
+                            background-color: lightblue;
+                        }
+
+                        /* mouse over link */
+                        a:hover {
+                            background-color: yellow;
+                        }
+                        
+                        /* selected link */
+                        a:active{
+                            background-color: yellow;
+                        }
+
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph.</p>
+                    <p><a href="https://www.w3schools.com">W3Schools.com</a></p>
+                </body>
+            </html><br/><br/>
+    </div>
+
+    <h1>Lists</h1>
+
+    <div>
+        Set the list style for unordered lists to "square", and the list style for ordered lists to "upper-roman".<br/><br/>
+
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            ul {<br/>
+                list-style-type:square;<br/>
+            }<br/>
+
+            ol {<br/>
+                list-style-type:upper-roman;<br/>
+            }<br/>
+
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &ltp&gt This is an unordered list: &lt/p&gt<br/>
+            &ltul&gt<br/>
+            &ltli&gt Coffee &lt/li&gt<br/>
+            &ltli&gt Tea &lt/li&gt<br/>
+            &ltli&gt Coca Cola &lt/li&gt<br/>
+            &lt/ul&gt<br/>
+
+            &ltp&gt This is an ordered list: &lt/p&gt<br/>
+            &ltol&gt<br/>
+            &ltli&gt Coffee &lt/li&gt<br/>
+            &ltli&gt Tea &lt/li&gt<br/>
+            &ltli&gt Coca Cola &lt/li&gt<br/>
+            &lt/ol&gt<br/>
+
+            
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        ul{
+                            list-style-type: square;
+                        }
+                        ol {
+                            list-style-type: upper-roman;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <p>This is an unordered list:</p>
+                    <ul>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Coca Cola</li>
+                    </ul>
+
+                    <p>This is an ordered list:</p>
+                    <ol>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Coca Cola</li>
+                    </ol>
+                </body>
+            </html><br/><br/>
+
+    </div>
+    <div>
+        Set the image "sqpurple.gif" as the list item marker for the unordered list.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            ul {<br/>
+                list-style-image: url('sqpurple.gif');<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &ltp&gt This is an unordered list: &lt/p&gt<br/>
+            &ltul&gt<br/>
+            &ltli&gt Coffee &lt/li&gt<br/>
+            &ltli&gt Tea &lt/li&gt<br/>
+            &ltli&gt Coca Cola &lt/li&gt<br/>
+            &lt/ul&gt<br/>
+
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        ul{
+                            list-style-image: url("sqpurple.gif");
+                        }
+                        
+                    </style>
+                </head>
+                <body>
+                    <p>This is an unordered list:</p>
+                    <ul>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Coca Cola</li>
+                    </ul>
+
+                </body>
+            </html><br/><br/>
+
+            <div>
+                With the list-style property: Set the unordered list marker to "img_marker.png", 
+                with a backup style of "circle", and display the markers inside the content flow.<br/><br/>
+
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            ul {<br/>
+                list-style: circle inside url('img_marker.png');<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &ltp&gt This is an unordered list: &lt/p&gt<br/>
+            &ltul&gt<br/>
+            &ltli&gt Coffee &lt/li&gt<br/>
+            &ltli&gt Tea &lt/li&gt<br/>
+            &ltli&gt Coca Cola &lt/li&gt<br/>
+            &lt/ul&gt<br/>
+
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        ul{
+                            list-style: circle inside url('img_marker.png');
+                        }
+                        
+                    </style>
+                </head>
+                <body>
+                    <p>This is an unordered list:</p>
+                    <ul>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Coca Cola</li>
+                    </ul>
+
+                </body>
+            </html><br/><br/>
+            </div>
+            <div>
+                Remove the bullets/markers from the list items.<br/><br/>
+
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            ul {<br/>
+                list-style-type:none;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &ltp&gt This is an unordered list: &lt/p&gt<br/>
+            &ltul&gt<br/>
+            &ltli&gt Coffee &lt/li&gt<br/>
+            &ltli&gt Tea &lt/li&gt<br/>
+            &ltli&gt Coca Cola &lt/li&gt<br/>
+            &lt/ul&gt<br/>
+
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        ul{
+                            list-style-type: none;
+                        }
+                        
+                    </style>
+                </head>
+                <body>
+                    <p>This is an unordered list:</p>
+                    <ul>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Coca Cola</li>
+                    </ul>
+
+                </body>
+            </html><br/><br/>
+            </div>
+
+    <h1>Tables</h1>
+
+    <div>
+        Set the border to "2px solid green" for table, th and td elements.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            table, th, td {
+                border: 2px solid green;
+            }
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &lttable&gt<br/>
+            &lttr&gt<br/>
+            &ltth&gt Firstname &lt/th&gt<br/>
+            &ltth&gt Lastname &lt/th&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lttr&gt<br/>
+            &lttd&gt Peter &lt/td&gt<br/>
+            &lttd&gt Griffin &lt/td&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lttr&gt<br/>
+            &lttd&gt Lois &lt/td&gt<br/>
+            &lttd&gt Griffin &lt/td&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lt/table&gt<br/>
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        table, th, td {
+                            border: 2px solid green;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <table>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                        </tr>
+                        <tr>
+                            <td>Peter</td>
+                            <td>Griffin</td>
+                        </tr>
+                        <tr>
+                            <td>Lois</td>
+                            <td>Griffin</td>
+                        </tr>
+                    </table>
+                </body>
+
+            </html><br/><br/>
+            
+    </div>
+    <div>
+        Collapse the table borders into a single border.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            table {<br/>
+                border-collapse: collapse;<br/>
+            }<br/>
+            table, th, td {<br/>
+                border: 1px solid black;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &lttable&gt<br/>
+            &lttr&gt<br/>
+            &ltth&gt Firstname &lt/th&gt<br/>
+            &ltth&gt Lastname &lt/th&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lttr&gt<br/>
+            &lttd&gt Peter &lt/td&gt<br/>
+            &lttd&gt Griffin &lt/td&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lttr&gt<br/>
+            &lttd&gt Lois &lt/td&gt<br/>
+            &lttd&gt Griffin &lt/td&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lt/table&gt<br/>
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        table {
+                            border-collapse: collapse;
+                        }
+                        table, th, td {
+                            border: 1px solid black;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <table>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                        </tr>
+                        <tr>
+                            <td>Peter</td>
+                            <td>Griffin</td>
+                        </tr>
+                        <tr>
+                            <td>Lois</td>
+                            <td>Griffin</td>
+                        </tr>
+                    </table>
+                </body>
+
+            </html><br/><br/>
+
+    </div>
+    <div>
+        Set the width of the table to "100%".<br/><br/>
+
+        &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            table {<br/>
+                width: 100%;<br/>
+            }<br/>
+            table, th, td {<br/>
+                border: 1px solid black;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &lttable&gt<br/>
+            &lttr&gt<br/>
+            &ltth&gt Firstname &lt/th&gt<br/>
+            &ltth&gt Lastname &lt/th&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lttr&gt<br/>
+            &lttd&gt Peter &lt/td&gt<br/>
+            &lttd&gt Griffin &lt/td&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lttr&gt<br/>
+            &lttd&gt Lois &lt/td&gt<br/>
+            &lttd&gt Griffin &lt/td&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lt/table&gt<br/>
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        table {
+                            width: 100%;
+                        }
+                        table, th, td {
+                            border: 1px solid black;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <table>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                        </tr>
+                        <tr>
+                            <td>Peter</td>
+                            <td>Griffin</td>
+                        </tr>
+                        <tr>
+                            <td>Lois</td>
+                            <td>Griffin</td>
+                        </tr>
+                    </table>
+                </body>
+
+            </html><br/><br/>
+    </div>
+    <div>
+        Set the text alignment in &lttd> elements to "right".<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            
+            table, th, td {<br/>
+                border: 1px solid black;<br/>
+            }<br/>
+            td {<br/>
+                text-align: right;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &lttable&gt<br/>
+            &lttr&gt<br/>
+            &ltth&gt Firstname &lt/th&gt<br/>
+            &ltth&gt Lastname &lt/th&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lttr&gt<br/>
+            &lttd&gt Peter &lt/td&gt<br/>
+            &lttd&gt Griffin &lt/td&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lttr&gt<br/>
+            &lttd&gt Lois &lt/td&gt<br/>
+            &lttd&gt Griffin &lt/td&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lt/table&gt<br/>
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        table, th, td {
+                            border: 1px solid black;
+                        }
+                        td {
+                            text-align: right;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <table>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                        </tr>
+                        <tr>
+                            <td>Peter</td>
+                            <td>Griffin</td>
+                        </tr>
+                        <tr>
+                            <td>Lois</td>
+                            <td>Griffin</td>
+                        </tr>
+                    </table>
+                </body>
+
+            </html><br/><br/>
+    </div>
+    <div>
+        Set the padding in &ltth> elements to "15px".<br/><br/>
+
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            
+            table, th, td {<br/>
+                border: 1px solid black;<br/>
+            }<br/>
+            th {<br/>
+                padding:15px;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &lttable&gt<br/>
+            &lttr&gt<br/>
+            &ltth&gt Firstname &lt/th&gt<br/>
+            &ltth&gt Lastname &lt/th&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lttr&gt<br/>
+            &lttd&gt Peter &lt/td&gt<br/>
+            &lttd&gt Griffin &lt/td&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lttr&gt<br/>
+            &lttd&gt Lois &lt/td&gt<br/>
+            &lttd&gt Griffin &lt/td&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lt/table&gt<br/>
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        table, th, td {
+                            border: 1px solid black;
+                        }
+                        th {
+                            padding: 15px;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <table>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                        </tr>
+                        <tr>
+                            <td>Peter</td>
+                            <td>Griffin</td>
+                        </tr>
+                        <tr>
+                            <td>Lois</td>
+                            <td>Griffin</td>
+                        </tr>
+                    </table>
+                </body>
+
+            </html><br/><br/>
+    </div>
+    <div>
+        Set the background color of &ltth> elements to "lightblue".<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            
+            table, th, td {<br/>
+                border: 1px solid black;<br/>
+            }<br/>
+            th {<br/>
+                background-color:lightblue;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &lttable&gt<br/>
+            &lttr&gt<br/>
+            &ltth&gt Firstname &lt/th&gt<br/>
+            &ltth&gt Lastname &lt/th&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lttr&gt<br/>
+            &lttd&gt Peter &lt/td&gt<br/>
+            &lttd&gt Griffin &lt/td&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lttr&gt<br/>
+            &lttd&gt Lois &lt/td&gt<br/>
+            &lttd&gt Griffin &lt/td&gt<br/>
+            &lt/tr&gt<br/>
+
+            &lt/table&gt<br/>
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        table, th, td {
+                            border: 1px solid black;
+                        }
+                        th {
+                            background-color: lightblue;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <table>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                        </tr>
+                        <tr>
+                            <td>Peter</td>
+                            <td>Griffin</td>
+                        </tr>
+                        <tr>
+                            <td>Lois</td>
+                            <td>Griffin</td>
+                        </tr>
+                    </table>
+                </body>
+
+            </html><br/><br/>
+    </div>
+
+    <h1>Display / Visibility</h1><br/><br/>
+
+    <div>
+        Hide the &lth1> element. It should still take up the same space as before.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            h1 {<br/>
+                visibility:hidden;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp&gt This is another paragraph. &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        h1 {
+                            visibility: hidden;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph.</p>
+                    <p>This is another paragraph.</p>
+                </body>
+            </html><br/><br/>
+    </div>
+    <div>
+        Hide the &lth1> element. It should not take up any space.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            h1 {<br/>
+                display:none;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp&gt This is another paragraph. &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        h1 {
+                            display: none;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph.</p>
+                    <p>This is another paragraph.</p>
+                </body>
+            </html><br/><br/>
+    </div>
+    <div>
+        Display the list items as inline elements.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            li {<br/>
+                display:inline;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &lth1&gt This is a Heading &lt/h2&gt<br/>
+            &ltul&gt<br/>
+            &ltli&gt Apple &lt/li&gt<br/>
+            &ltli&gt Orange &lt/li&gt<br/>
+            &ltli&gt Pear &lt/li&gt<br/>
+            &lt/ul&gt<br/>
+
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        li {
+                            display: inline;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a heading</h1>
+                    <ul>
+                        <li>Apple</li>
+                        <li>Orange</li>
+                        <li>Pear</li>
+                    </ul>
+                </body>
+            </html><br/><br/>
+
+    </div>
+    <div>
+        Display the %ltstrong> elements as block elements.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            strong {
+                display:block;
+            }
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a &ltstrong&gt paragraph &lt/strong&gt, with some words more &ltstrong&gt important &lt/strong&gt
+            than others. &lt/p&gt<br/>
+            &ltp&gt This is another paragraph. &lt/p&gt<br/>
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        strong {
+                            display: block;
+                        }
+                    </style>
+
+                </head>
+                <body>
+                    <h1>This is a heading</h1>
+                    <p>This is a <strong>paragraph</strong> with some words more <strong> important </strong> than others. </p>
+                    <p>This is another paragraph.</p>
+                </body>
+
+            </html><br/><br/>
+
+    </div>
+
+    <h1>Positioning</h1><br/><br/>
+
+    <div>
+        Position the &lth1> element to always be 50px from the top, and 50px from the right, 
+        relative to the window/frame edges.<br/><br/>
+
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            h1 {<br/>
+                position:fixed;<br/>
+                top:50px;<br/>
+                right:50px;<br/>
+                color:red;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &lp1&gt This is a paragraph. &lt/p&gt<br/>
+            &lp1&gt This is another paragraph. &lt/p&gt<br/>
+
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        h1 {
+                            position: fixed;
+                            top: 50px;
+                            right: 50px;
+                            color: red;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph</p>
+                    <p>This is another paragraph</p>
+                </body>
+            </html><br/><br/>
+    </div>
+    <div>
+        Position the &lth1> element 20px left, and 30px down, relative to its normal position.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            h1 {<br/>
+                position:relative;<br/>
+                top:30px;<br/>
+                left:-20px;<br/>
+                color:red;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &lp1&gt This is a paragraph. &lt/p&gt<br/>
+            &lp1&gt This is another paragraph. &lt/p&gt<br/>
+
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        h1 {
+                            position: relative;
+                            top: 30px;
+                            left: -20px;
+                            color: red;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph</p>
+                    <p>This is another paragraph</p>
+                </body>
+            </html><br/><br/>
+    </div>
+    <div>
+        Position the &lth1> element 50px from the left, and 100px from the top, relative to the HTML page.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            h1 {<br/>
+                position:absolute;<br/>
+                top:100px;<br/>
+                left:50px;<br/>
+                color:red;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &lp1&gt This is a paragraph. &lt/p&gt<br/>
+            &lp1&gt This is another paragraph. &lt/p&gt<br/>
+
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        h1 {
+                            position: absolute;
+                            top: 100px;
+                            left: 50px;
+                            color: red;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph</p>
+                    <p>This is another paragraph</p>
+                </body>
+            </html><br/><br/>
+    </div>
+    <div>
+        Position the &ltimg> element behind the text.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            img {<br/>
+                position:absolute;<br/>
+                left:0px;<br/>
+                top:0px;<br/>
+            
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp1&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp1&gt This is another paragraph. &lt/p&gt<br/>
+            &ltimg src="w3css.gif" width="100" height="140">
+
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        img {
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph</p>
+                    <p>This is another paragraph</p>
+                    <img src="smiley.gif" width="100" height="140">
+                </body>
+            </html><br/><br/>
+    </div>
+    <div>
+        Position the element with the "topleft" class 30px from the left, and 15px from the top, relative to its container.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            .container {
+                position:relative;
+            }
+            .topleft {
+                position:absolute;
+                left: 30px;
+                top: 25px;
+                font-size: 18px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                opacity: 0.3;
+            }
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &ltdiv class="container">
+                &ltimg src="img_5terre.jpg" alt="Cinque Terre" width="1000" height="300">
+                &ltdiv class="topleft">Top Left&lt/div>
+            &lt/div>
+            
+            &lt/body>
+            &lt/html>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <style>
+            .container {
+                position: relative;
+            }
+
+            .topleft {
+                position: absolute;
+                left: 30px;
+                top: 15px;
+                font-size: 18px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                opacity: 0.3;
+            }
+            </style>
+            </head>
+            <body>
+
+            <div class="container">
+            <img src="img_5terre.jpg" alt="Cinque Terre" width="1000" height="300">
+            <div class="topleft">Top Left</div>
+            </div>
+
+
+            </body>
+            </html><br/><br/>
+    </div>
+    
+
+    <h1>Overflow</h1>
+    <div>
+        Add a scrollbar to the &ltdiv> element.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            div {<br/>
+                background-color: #eee;<br/>
+                width: 200px;<br/>
+                heught: 70px;<br/>
+                border: 1px dotted black;<br/>
+                overflow: scroll;<br/>
+            }
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &ltdiv &gt <br/>
+            &lt p &gt In my younger and more vulnerable years my father gave me some 
+            advice that I've been turning over in my mind ever since. &lt /p &gt<br/>
+            &lt p &gt'Whenever you feel like criticizing anyone,' he told me, 'just 
+            remember that all the people in this world haven't had the advantages that you've had.'&lt /p &gt<br/>
+            &lt /div &gt<br/>
+            &lt /body &gt<br/>
+            &lt /html &gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <style>
+                div {
+                background-color: #eee;
+                width: 200px;
+                height: 70px;
+                border: 1px dotted black;
+                overflow: scroll;
+            }
+            </style>
+            </head>
+            <body>  
+
+            <div>
+            <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+            <p>'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'</p>
+            </div>
+
+            </body>
+            </html><br/><br/>
+
+
+    </div>
+    <div>
+        Specify that the overflowing text in the &ltdiv> element should not be visible, not even with scrolling.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            div {<br/>
+                background-color: lightblue;<br/>
+                width: 200px;<br/>
+                height: 200px;<br/>
+                overflow: hidden;<br/>
+            }
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &ltdiv&gt Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. &lt/div&gt<br/>
+
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <style>
+                div {
+                background-color:lightblue;
+                width: 200px;
+                height: 200px;
+                overflow: hidden;
+            }
+            </style>
+            </head>
+            <body>  
+
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+                anim id est laborum. </div>
+
+            </body>
+            </html><br/><br/>
+    </div>
+    <div>
+        Add a horizontal scrollbar to %ltdiv>.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            div {<br/>
+                background-color: #eee;<br/>
+                width: 150px;<br/>
+                height: 70px;<br/>
+                border: 1px dotted black;<br/>
+                white-space:nowrap;<br/>
+                overflow-x: scroll;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &ltdiv&gt &ltp&gt In my younger and more vulnerable years my father 
+            gave me some advice that I've been turning over in my mind ever since. &lt/p&gt &lt/div&gt <br/>
+
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <style>
+                div {
+                background-color:#eee;
+                width: 150px;
+                height: 70px;
+                border: 1pz dotted black;
+                white-space: nowrap;
+                overflow-x:scroll;
+            }
+            </style>
+            </head>
+            <body>  
+
+            <div><p>In my younger and more vulnerable years my father gave me some
+            advice that I've been turning over in my mind ever since.</p> </div>
+
+            </body>
+            </html><br/><br/>
+    </div>
+
+    <h1>Align</h1>
+
+    <div>
+        Center align the &ltdiv> element using margins.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            div {
+                margin-left:auto;
+                margin-right:auto;
+                width: 300px;
+                background-color: #b0e0e6;
+            }
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &ltdiv&gt &ltp&gt In my younger and more vulnerable years my father 
+            gave me some advice that I've been turning over in my mind ever since. &lt/p&gt &lt/div&gt <br/>
+            &ltdiv&gt &ltp&gt 'Whenever you feel like criticizing anyone,' he told me, 
+            'just remember that all the people in this world haven't had the advantages
+            that you've had.' &lt/p&gt &lt/div&gt <br/>
+
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <style>
+                div {
+                margin-left: auto;
+                margin-right: auto;
+                width: 300px;
+                background-color: #b0e0e6;
+            }
+            </style>
+            </head>
+            <body>  
+
+            <div><p>In my younger and more vulnerable years my father gave me some
+            advice tha#b0e0e6t I've been turning over in my mind ever since.</p> 
+            <p>'Whenever you feel like criticizing anyone,' he told me, 'just remember 
+                that all the people in this world haven't had the advantages that you've had.'</p> 
+            </div>
+
+            </body>
+            </html><br/><br/>
+
+    </div>
+    <div>
+        Position the &ltdiv> element all the way to the right using absolute positioning.<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            div {<br/>
+                positio:absolute;<br/>
+                right:0px;<br/>
+                width: 300px;<br/>
+                background-color: #b0e0e6;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &ltdiv&gt &ltp&gt In my younger and more vulnerable years my father 
+            gave me some advice that I've been turning over in my mind ever since. &lt/p&gt &lt/div&gt <br/>
+            &ltdiv&gt &ltp&gt 'Whenever you feel like criticizing anyone,' he told me, 
+            'just remember that all the people in this world haven't had the advantages
+            that you've had.' &lt/p&gt &lt/div&gt <br/>
+
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <style>
+                div {
+                position: absolute;
+                right: 0px;
+                width: 300px;
+                background-color: #b0e0e6;
+            }
+            </style>
+            </head>
+            <body>  
+
+            <div><p>In my younger and more vulnerable years my father gave me some
+            advice tha#b0e0e6t I've been turning over in my mind ever since.</p> 
+            <p>'Whenever you feel like criticizing anyone,' he told me, 'just remember 
+                that all the people in this world haven't had the advantages that you've had.'</p> 
+            </div>
+
+            </body>
+            </html><br/><br/>
+    </div>
+
+    <h1>Combinators</h1>
+
+    <div>
+        Change the color of all &ltp> elements, that are descendants of %ltdiv> elements, to "red".<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            div p {<br/>
+                color:red;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &ltdiv&gt &ltp&gt This is a paragraph inside a div element. &lt/p&gt  <br/>
+            
+            &ltp&gt This is another paragraph inside a div element. &lt/p&gt <br/>
+
+            &ltspan&gt &ltp&gt This a paragraph inside a span element, inside a div element. &lt/p&gt &lt/span&gt &lt/div&gt <br/>
+
+            &ltp&gt This is a paragraph, not inside a div element. &lt/p&gt  <br/>
+            &ltp&gt This is another paragraph not inside a div element. &lt/p&gt  <br/>
+            
+
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <style>
+            div p {
+                color: red;
+            }
+            </style>
+            </head>
+            <body>
+
+            <div>
+                <p>This is a paragraph inside a div element.</p>
+                <p>This is another paragraph inside a div element.</p>
+                <span><p>This a paragraph inside a span element, inside a div element.</p></span>
+            </div>
+
+            <p>This is a paragraph, not inside a div element.</p>
+            <p>This is another paragraph, not inside a div element.</p>
+
+            </body>
+            </html>
+    </div>
+    <div>
+        Change the color of all &ltp> elements, that are immediate children of &ltdiv> elements, to "red".<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            div > p {<br/>
+                color:red;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &ltdiv&gt &ltp&gt This is a paragraph inside a div element. &lt/p&gt  <br/>
+            
+            &ltp&gt This is another paragraph inside a div element. &lt/p&gt <br/>
+
+            &ltspan&gt &ltp&gt This a paragraph inside a span element, inside a div element. &lt/p&gt &lt/span&gt &lt/div&gt <br/>
+
+            &ltp&gt This is a paragraph, not inside a div element. &lt/p&gt  <br/>
+            &ltp&gt This is another paragraph not inside a div element. &lt/p&gt  <br/>
+            
+
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <style>
+            div > p {
+                color: red;
+            }
+            </style>
+            </head>
+            <body>
+
+            <div>
+                <p>This is a paragraph inside a div element.</p>
+                <p>This is another paragraph inside a div element.</p>
+                <span><p>This a paragraph inside a span element, inside a div element.</p></span>
+            </div>
+
+            <p>This is a paragraph, not inside a div element.</p>
+            <p>This is another paragraph, not inside a div element.</p>
+
+            </body>
+            </html><br/><br/>
+    </div>
+    <div>
+        Change the color of &ltp> elements, that are the adjacent (immediately following) sibling of 
+        a &ltdiv> element, to "red".<br/><br/>
+
+        &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            div + p {<br/>
+                color:red;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &ltdiv&gt &ltp&gt This is a paragraph inside a div element. &lt/p&gt  <br/>
+            
+            &ltp&gt This is another paragraph inside a div element. &lt/p&gt <br/>
+
+            &ltspan&gt &ltp&gt This a paragraph inside a span element, inside a div element. &lt/p&gt &lt/span&gt &lt/div&gt <br/>
+
+            &ltp&gt This is a paragraph, not inside a div element. &lt/p&gt  <br/>
+            &ltp&gt This is another paragraph not inside a div element. &lt/p&gt  <br/>
+            
+
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <style>
+            div + p {
+                color: red;
+            }
+            </style>
+            </head>
+            <body>
+
+            <div>
+                <p>This is a paragraph inside a div element.</p>
+                <p>This is another paragraph inside a div element.</p>
+                <span><p>This a paragraph inside a span element, inside a div element.</p></span>
+            </div>
+
+            <p>This is a paragraph, not inside a div element.</p>
+            <p>This is another paragraph, not inside a div element.</p>
+
+            </body>
+            </html><br/><br/>
+
+    </div>
+    <div>
+        Change the color of &ltp> elements, that are the siblings of a &ltdiv> element, to "red".<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            div ~ p {<br/>
+                color:red;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &ltdiv&gt &ltp&gt This is a paragraph inside a div element. &lt/p&gt  <br/>
+            
+            &ltp&gt This is another paragraph inside a div element. &lt/p&gt <br/>
+
+            &ltspan&gt &ltp&gt This a paragraph inside a span element, inside a div element. &lt/p&gt &lt/span&gt &lt/div&gt <br/>
+
+            &ltp&gt This is a paragraph, not inside a div element. &lt/p&gt  <br/>
+            &ltp&gt This is another paragraph not inside a div element. &lt/p&gt  <br/>
+            
+
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <style>
+            div ~ p {
+                color: red;
+            }
+            </style>
+            </head>
+            <body>
+
+            <div>
+                <p>This is a paragraph inside a div element.</p>
+                <p>This is another paragraph inside a div element.</p>
+                <span><p>This a paragraph inside a span element, inside a div element.</p></span>
+            </div>
+
+            <p>This is a paragraph, not inside a div element.</p>
+            <p>This is another paragraph, not inside a div element.</p>
+
+            </body>
+            </html><br/><br/>
+    </div>
+
+
+    <h1>Pseudo-classes</h1>
+    <div>
+        Set the background color for visited and unvisited links to "lightblue", 
+        and the background color for the hover and active link states to "yellow".<br/><br/>
+
+        &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            /* unvisited link */<br/>
+            a:link {<br/>
+                background-color:lightnblue;<br/>
+            }<br/>
+
+            /* visited link */<br/>
+            a:visited {<br/>
+                background-color:lightnblue;<br/>
+            }<br/>
+
+            /* mouse over link */<br/>
+            a:hover {<br/>
+                background-color:yellow;<br/>
+            }<br/>
+
+            /* selected link */<br/>
+            a:active {<br/>
+                background-color:yellow;<br/>
+            }<br/>
+
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp&gt &lta href="https://www.w3schools.com"> W3schools.com &lt/a&gt &lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        /* unvisited link */
+                        a:link {
+                            background-color: lightblue;
+                        }
+
+                        /* visited link */
+                        a:visited {
+                            background-color: lightblue;
+                        }
+
+                        /* mouse over link */
+                        a:hover {
+                            background-color: yellow;
+                        }
+                        
+                        /* selected link */
+                        a:active{
+                            background-color: yellow;
+                        }
+
+                    </style>
+                </head>
+                <body>
+                    <h1>This is a Heading</h1>
+                    <p>This is a paragraph.</p>
+                    <p><a href="https://www.w3schools.com">W3Schools.com</a></p>
+                </body>
+            </html><br/><br/>
+    </div>
+    <div>
+        Change the background color, when a user hovers over p elements, with the class "highlight", to "lightblue".<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            p.highlight:hover {<br/>
+                background-color:lightblue;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &lth1&gt This is a Heading &lt/h1&gt<br/>
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp class="highlight"> This is another paragraph&lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <style>
+            p.highlight:hover {
+            background-color: lightblue;
+            }
+            </style>
+            </head>         
+            <body>
+
+            <h1>This is a Heading</h1>
+            <p>This is a paragraph.</p>
+            <p class="highlight">This is another paragraph.</p>
+
+            </body>
+            </html><br/><br/>
+
+    </div>
+    <div>
+        Set the background color of &ltp> elements, that are the first child of any element, to "lightblue".<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            p:first-child {
+                background-color:lightblue;
+            }
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+            
+            &ltp&gt This is a paragraph. &lt/p&gt<br/>
+            &ltp> This is another paragraph&lt/p&gt<br/>
+    
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <style>
+            p:first-child {
+                background-color: lightblue;
+            }
+            </style>
+            </head>
+            <body>
+
+            <p>This is a paragraph.</p>
+            <p>This is also a paragraph</p>
+
+            </body>
+            </html><br/><br/>
+
+
+    </div>
+    <div>
+        Set the background color of &ltinput> elements that are in focus (clicked or active), to "lightblue".<br/><br/>
+            &lt!DOCTYPE html&gt<br/>
+            &lthtml&gt<br/>
+            &lthead&gt<br/>
+            &ltstyle&gt<br/>
+            input:focus {<br/>
+                background-color:lightblue;<br/>
+            }<br/>
+            &lt/style&gt<br/>
+            &lt/head&gt<br/>
+            &ltbody&gt<br/>
+
+            &ltform action="/action_page.php" method="get"><br/>
+            Firstname &lt input type="text" name="fname">&ltbr><br/>
+            Lastname &lt input type="text" name="lname">&ltbr><br/>
+            &lt input type="submit" value="Submit"<br/>
+            &lt/form&gt<br/>
+            &lt/body&gt<br/>
+            &lt/html&gt<br/>
+
+            Example:
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <style>
+            input:focus {
+                background-color: lightblue;
+            }
+            </style>
+            </head>
+            <body>
+
+            <form action="/action_page.php" method="get">
+            First name: <input type="text" name="fname"><br>
+            Last name: <input type="text" name="lname"><br>
+            <input type="submit" value="Submit">
+            </form>
+
+            </body>
+            </html>                 
+
+
+
+    </div>
+
+    <h1>Pseudo-elements</h1>
+
+    <h1>Opacity</h1>
+
+    <h1>Atribute Selectors</h1>
+
+    <h1>Rounded Corners</h1>
+
+    <h1>Border Images</h1>
+
+    <h1>Backgrounds</h1>
+
+    <h1>Colors</h1>
+
+    <h1>Gradients</h1>
+
+    <h1>Shadow Effects</h1>
+
+    <h1>Text Effects</h1>
+
+    <h1>Web Fonts</h1>
+
+    <h1>2D Transforms</h1>
+
+    <h1>3D Transforms</h1>
+
+    <h1>Transitions</h1>
+
+    <h1>Animations</h1>
+
+    
+</body>
+
+</html>
